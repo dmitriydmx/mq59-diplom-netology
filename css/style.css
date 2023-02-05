@@ -594,7 +594,7 @@ body {
     display: flex;
     position: relative;
     flex-direction: column;
-    max-width: 390px;
+    max-width: 23.5%;
     background-color: #ffffff;
     border: 1px solid #fff;
     padding: 30px 25px;
@@ -608,6 +608,7 @@ body {
     background-color: #f5f2f2;
     margin: 5px 0 20px;
     font-size: 1.4rem;
+    color:#888888;
     -webkit-appearance: none;
     -moz-appearance: none;
     background-image: url(../svg/form-arrows.svg);
@@ -709,6 +710,9 @@ body {
     .shop-item {
         width: calc(100%/2 - 20px);
     }
+    .popup-form {
+        max-width: 60%;
+    }
 }
 @media (max-width: 360px) {
     .header {
@@ -760,6 +764,9 @@ body {
     }
     .shop-item {
         width: 100%;
+    }
+    .popup-form {
+        max-width: 92%;
     }
 }
 @media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
