@@ -109,8 +109,7 @@ body {
     text-transform: uppercase;
     color: #ffffff;
     text-align: center;
-    padding-top: 10rem;
-    margin: 0 auto;
+    margin: 10rem auto 0;
     font-weight: bold;
 }
 
@@ -173,11 +172,14 @@ body {
     margin: 0 auto;
     
 }
-.trend-title {
+.trend-title-link {
     text-transform: uppercase;
     color:#ffffff;
     font-size: 2rem;
     font-weight: bold;
+}
+.trend-title-link:hover {
+    color: #b59f5b;
 }
 .trend1 {    
     background-image: url(../images/trend1.jpg);
@@ -203,9 +205,7 @@ body {
     margin: 0 auto;
 }
 .main {
-    width: 66.5%;
-    display: flex;
-    flex-direction: column;
+    width: 66.5%;   
 }
 .news {
     width: 100%;
@@ -223,21 +223,27 @@ body {
     max-width: 367px;
 }
 .new-post-block {
-    max-width: 184px;
+    max-width: 18.4rem;
+    flex-grow: 1;
 }
 .news-tags {
     display: flex;
     flex-wrap: wrap;
 }
-.news-tags-item {    
+.news-tags-item {   
+    margin-right: 1.9rem;
+}
+.news-tags-item:nth-last-of-type(1) {
+    margin-right: 0;
+}
+.news-tags-item:hover {
+    text-decoration: underline;
+}
+.news-tags-link {
     font-size: 1.4rem;
     font-weight: bold;
     color: #b59f5b;
     text-transform: uppercase;
-    margin-right: 1.9rem;
-}
-.news-tags-item:hover {
-    text-decoration: underline;
 }
 .news-name {
     margin-top: 4px;
@@ -340,12 +346,12 @@ body {
 }
 .search-field {
     border: none;
-    width: 100%;
     height: 48px;
     background-color: #f4f7f6;
     padding-left: 18px;
     padding-right: 5px;
     font-size: 13px;
+    flex-grow: 1;
 }
 .search-field:focus {
     border-bottom: 1px solid #b59f5b;
@@ -358,7 +364,7 @@ body {
     background-size: 18px;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #b59f5b;
+    background-color: #b59f5b;    
 }
 .form-subscribe {
     margin-top: 54px;
@@ -419,12 +425,16 @@ body {
     display: block;
     font-size: 1.2rem;
     font-weight: bold;
-    border: 3px solid #eeeeee;
-    color: #0f0d0e;
+    border: 1px solid #eeeeee;
+    color: #302a2d;
     text-transform: uppercase;
     padding: 0.4rem 1.2rem;
     margin-right: 7px;
     margin-bottom: 5px;
+}
+.tegs-list-link:hover {
+    color:#000000;
+    border: 1px solid #000000;
 }
 .themes {
     margin-top: 50px;
@@ -489,6 +499,7 @@ body {
     color: #000000;
 }
 .shop-item-link {
+    font-size: 1.5rem;
     color: #b59f5b; 
 }
 .shop-item-link:hover {
@@ -594,7 +605,7 @@ body {
     display: flex;
     position: relative;
     flex-direction: column;
-    max-width: 23.5%;
+    max-width: 25%;
     background-color: #ffffff;
     border: 1px solid #fff;
     padding: 30px 25px;
@@ -681,6 +692,7 @@ body {
     right: 0;
     top: -27px;
     border:0;
+    background-color: rgba(0, 0, 0, 0);
 }
 .burger-menu {
     display: none;
@@ -696,7 +708,9 @@ body {
         height: 20px;
         background-image: url(../svg/menu-icon.svg);
         background-repeat: no-repeat;
-        background-position: center center;        
+        background-position: center center; 
+        background-color: rgba(0, 0, 0, 0); 
+        border: 0;      
     }
     .menu-list {
         display: none;
@@ -729,7 +743,7 @@ body {
     .header-logo {
         position: absolute;
         left: 12%;
-        top: 40%;
+        top: 25%;
         width: 268px;
     }
     .burger-menu {
