@@ -214,17 +214,19 @@ body {
     margin-bottom: 6rem;
 }
 
-.news-img {    
-    max-width: 100%;
+.news-img-link {    
     display: block;
-    background-color: #eff6f1;
+    background-color: #ffffff;
+    margin-right: 5%;
+}
+.news-img {
+    width: 100%;
 }
 .news-block {
-    max-width: 367px;
+    width: 47%;
 }
 .new-post-block {
-    max-width: 18.4rem;
-    flex-grow: 1;
+    width: 68%;
 }
 .news-tags {
     display: flex;
@@ -345,16 +347,20 @@ body {
     overflow: hidden;
 }
 .search-field {
+    background-color: #f4f7f6;  
+    flex-grow: 1;
+}
+.search-field:focus {
+    border-bottom: 1px solid #b59f5b;
+}
+.search-field-input {
     border: none;
     height: 48px;
     background-color: #f4f7f6;
     padding-left: 18px;
     padding-right: 5px;
-    font-size: 13px;
-    flex-grow: 1;
-}
-.search-field:focus {
-    border-bottom: 1px solid #b59f5b;
+    font-size: 13px;  
+    width: 100%;  
 }
 .search-button {
     border: none;
@@ -410,9 +416,10 @@ body {
     font-size: 14px;
     text-transform: uppercase;
 }
-.mailing-button:hover {
-    border-top: 1px solid #323232;
-}
+.button:hover {
+    border-top: 1px solid #b59f5b;
+    cursor: pointer;
+} 
 .tegs {
     margin-top: 58px;
 }
@@ -434,7 +441,6 @@ body {
 }
 .tegs-list-link:hover {
     color:#000000;
-    border: 1px solid #000000;
 }
 .themes {
     margin-top: 50px;
@@ -450,6 +456,9 @@ body {
 .themes-list-link {
     font-size: 1.4rem;
     font-weight: bold;
+    color: #302a2d;
+}
+.themes-list-link:hover {
     color: #000000;
 }
 .counter-themes {
@@ -469,10 +478,15 @@ body {
 .shop-item {
     width: 29.5%;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;   
 }
 .shop-item-picture {
+    display: flex; 
+    width: 87%;   
     margin: 0 auto;
+}
+.shop-item-img {    
+    width: 100%;
 }
 .shop-item-info {
     display: flex;
@@ -527,11 +541,7 @@ body {
     font-weight: bold;
     color: #ffffff;
     text-transform: uppercase;
-    border: 0;
-}
-.shop-item-button:hover {
-    border: 1px solid #323232;
-    cursor: pointer;
+    border: none;
 }
 .footer {
     width: 100%;
@@ -605,7 +615,7 @@ body {
     display: flex;
     position: relative;
     flex-direction: column;
-    max-width: 25%;
+    max-width: 39rem;
     background-color: #ffffff;
     border: 1px solid #fff;
     padding: 30px 25px;
@@ -698,9 +708,6 @@ body {
     display: none;
 }
 @media (max-width: 768px) {
-    .header {
-        background-image: url(../images/banner-bg-tablet.jpg);
-    }
     .burger-menu {
         display: block;
         align-self: center;
@@ -715,20 +722,32 @@ body {
     .menu-list {
         display: none;
     }
-    .trend {
-        width: calc(100%/2 - 3px);
-    }
     .news {
         flex-direction: column;
     }
-    .shop-item {
-        width: calc(100%/2 - 20px);
+    .news-img-link {    
+        margin-right: 0;
+    }
+    .news-block {
+        width: 100%;
+    }     
+    .main {
+        margin-right: 5%;
     }
     .popup-form {
         max-width: 60%;
-    }
+    } 
 }
-@media (max-width: 360px) {
+
+@media (min-width: 641px) and (max-width: 1200px) {
+    .header {
+        background-image: url(../images/banner-bg-tablet.jpg);
+    }   
+    .trend {
+        width: calc(100%/2 - 3px);
+    }   
+}
+@media (max-width: 640px) {
     .header {
         background-image: url(../images/banner-mobile.jpg);
         height: 90vh;
@@ -742,9 +761,11 @@ body {
     }
     .header-logo {
         position: absolute;
-        left: 12%;
-        top: 25%;
+        left: 50%;
+        top: 45%;
         width: 268px;
+        margin-left: -134px;
+        margin-top: -134px;
     }
     .burger-menu {
         position: absolute;
@@ -774,18 +795,27 @@ body {
         font-size: 1.4rem;
     }   
     .new-post-block {        
-        max-width: 230px;        
+        flex-grow: 1;
     }
     .shop-item {
         width: 100%;
     }
     .popup-form {
-        max-width: 92%;
+        max-width: 33rem;
+        max-height: 100%;
+    }
+    .new-post-img {
+        margin-right: 5%;
     }
 }
 @media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
     .trend {
         width: calc(100%/2 - 3px);
+    }
+}
+@media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
+    .trend {
+        width: calc(100%/4 - 3px);
     }
 }
 @media (max-width: 640px) and (orientation: portrait) {
